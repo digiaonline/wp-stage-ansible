@@ -1,0 +1,12 @@
+---
+- include_vars: ../../../secrets.yml
+- include_vars: ../../../sites.yml
+
+- include: apt.yml
+- include: mysql.yml
+- include: nginx.yml
+- include: php.yml
+- include: php_fpm.yml
+- include: ohmyzshrc.yml
+- include: wp_cli.yml
+- include: folders.yml

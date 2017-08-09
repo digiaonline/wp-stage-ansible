@@ -1,0 +1,7 @@
+- name: Folders | Create folders
+  file: path=/srv/sites/{{ item.name }}/shared/web/app/uploads state=directory recurse=yes owner=www group=www mode=0755
+  with_items: "{{ sites }}"
+
+- name: Folders | Create env-files
+  template: src=../templates/env.j2 dest=/srv/sites/{{ item.name }}/shared/.env
+  with_items: "{{ sites }}"
