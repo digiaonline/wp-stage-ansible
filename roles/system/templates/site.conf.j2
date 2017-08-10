@@ -1,6 +1,6 @@
 server {
     listen 80;
-    server_name {{ item.name }};
+    server_name {{ item.domain }};
 
     access_log /var/log/nginx/{{ item.name }}.access.log;
     error_log  /var/log/nginx/{{ item.name }}.error.log;
