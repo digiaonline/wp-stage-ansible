@@ -1,0 +1,7 @@
+---
+- name: Delete deprecated site (DB, nginx, folder)
+  hosts: wpstage
+  gather_facts: yes
+
+  roles:
+    - delete

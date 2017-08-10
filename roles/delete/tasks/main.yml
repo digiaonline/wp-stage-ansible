@@ -1,0 +1,22 @@
+---
+- include_vars: ../../../secrets.yml
+
+- name: Delete | Delete DB
+  mysql_db:
+    name: '{{ delete_site }}_staging'
+    login_user: '{{ mysql_user }}'
+    login_password: '{{ mysql_password }}'
+    state: absent
+  when: delete_site is defined
+
+- name: Delete | Delete nginx-conf
+  file:
+    path: '/etc/nginx/sites-available/{{ delete_site }}.conf'
+    state: absent
+  when: delete_site is defined
+
+- name: Delete | Delete folder
+  file:
+    path: '/srv/sites/{{ delete_site }}'
+    state: absent
+  when: delete_site is defined
