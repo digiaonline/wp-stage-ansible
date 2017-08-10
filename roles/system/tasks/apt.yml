@@ -1,9 +1,9 @@
-# - name: System | Update and upgrade apt packages
-#   become: true
-#   apt:
-#     upgrade: yes
-#     update_cache: yes
-#     cache_valid_time: 86400
+- name: System | Update and upgrade apt packages
+  become: true
+  apt:
+    upgrade: yes
+    update_cache: yes
+    cache_valid_time: 86400
 
 - name: System | Install python-software-properties
   apt: pkg=python-software-properties state=installed
