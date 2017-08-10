@@ -29,5 +29,5 @@
   notify: restart mysql
 
 - name: MySQL | Create Databases
-  mysql_db: name={{ item.db_name }} state=present login_password={{ mysql_password }} login_user={{ mysql_user }}
+  mysql_db: name={{ item.name }}_staging state=present login_password={{ mysql_password }} login_user={{ mysql_user }}
   with_items: "{{ sites }}"
