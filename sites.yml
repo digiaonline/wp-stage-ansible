@@ -1,6 +1,11 @@
 ---
 sites:
-  # -
-  #   name: 'test'
-  #   domain: 'test.testi.in'
-  #   db_name: 'test_dev'
+  -
+    name: 'nattours'
+    domain: 'nattours.testi.in'
+    db_name: 'nattours_dev'
+
+  -
+    name: 'opetusvirasto'
+    domain: 'opev.testi.in'
+    db_name: 'opetusvirasto_dev'
